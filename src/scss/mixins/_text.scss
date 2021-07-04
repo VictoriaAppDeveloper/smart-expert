@@ -1,0 +1,36 @@
+@mixin font-size () {
+  @each $key, $value in $font-sizes {
+    .text-#{$key} {
+      font-size: $value;
+    }
+  }
+}
+
+@mixin font-weight () {
+  @each $key, $value in $font-weights {
+    .font-#{$key} {
+      font-weight: $value;
+    }
+  }
+}
+
+@mixin line-height () {
+  @each $key, $value in $line-heights {
+    .lh-#{$key} {
+      line-height: $value;
+    }
+  }
+}
+
+@mixin text-color () {
+  @each $key, $value in $text-colors {
+    .text-#{$key} {
+      color: $value;
+    }
+  }
+}
+
+@include font-size();
+@include font-weight();
+@include line-height();
+@include text-color();

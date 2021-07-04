@@ -1,0 +1,19 @@
+@mixin space($className, $styleName) {
+  $i: 0;
+  @while $i <= 50 {
+    #{$className + $i} {
+      #{$styleName}: #{$i};
+    }
+    $i: $i + $spacer;
+  }
+}
+
+
+@include space('.pl-', 'padding-left');
+@include space('.pr-', 'padding-right');
+@include space('.pt-', 'padding-top');
+@include space('.pb-', 'padding-bottom');
+@include space('.mb-', 'margin-bottom');
+@include space('.mt-', 'margin-top');
+@include space('.ml-', 'margin-left');
+@include space('.mr-', 'margin-right');

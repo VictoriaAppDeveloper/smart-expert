@@ -1,0 +1,49 @@
+$primary: #4468D6;
+$secondary: #ABB2BF;
+$light-grey: #F2F3F6;
+$black: #252629;
+$white: #FFFFFF;
+
+$spacer: 4px;
+
+$text-colors: (
+  DEFAULT: $black,
+  brand: $primary,
+  secondary: $secondary,
+  light-grey: $light-grey,
+  white: $white
+);
+
+$font-sizes: (
+  DEFAULT: 13px,
+  sm: 12px,
+  xl: 18px
+);
+
+$font-weights: (
+  DEFAULT: normal,
+  thin: 300,
+  medium: 500,
+);
+
+$line-heights: (
+  DEFAULT: 14px,
+  md: 15px,
+  xl: 20px,
+);
+
+$box-shadows: (
+  DEFAULT: 0px 2px 6px rgba(0, 44, 92, 0.1),
+  xl: 0px 6px 15px rgba(0, 44, 92, 0.1)
+);
+
+$container-size: 1200px;
+
+$text-decorations: (
+  DEFAULT: none
+);
+
+$displays: (
+  block: block,
+  flex: flex
+)

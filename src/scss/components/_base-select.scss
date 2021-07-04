@@ -1,0 +1,47 @@
+@import "../variables";
+@import "../functions";
+
+.base-select {
+  min-width: 265px;
+  position: relative;
+  width: 265px;
+  user-select: none;
+  &__field {
+    border: 1px solid $secondary;
+    border-radius: 2px;
+    padding: $spacer * 2 $spacer * 3;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+    color: $black;
+  }
+
+  &--open {
+    .base-select__dropdown-icon {
+      transform: rotateX(180deg);
+    }
+  }
+
+  &__dropdown-icon {
+    position: absolute;
+    right: $spacer * 3;
+  }
+
+  &__options {
+    box-shadow: get-shadow();
+    position: absolute;
+    width: 100%;
+    background: $white;
+  }
+
+  &__option {
+    padding: $spacer * 2 $spacer * 3;
+    cursor: pointer;
+
+    &:hover {
+      background: $light-grey;
+    }
+  }
+}

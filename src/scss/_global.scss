@@ -1,0 +1,46 @@
+@import "functions";
+@import "variables";
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+body {
+  font-size: get-font-size();
+  font-weight: get-font-weight();
+  color: get-text-color();
+  line-height: get-line-height();
+  font-family: 'Rubik', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: get-text-color();
+  text-decoration: get-text-decoration();
+}
+
+label {
+  display: block;
+}
+
+button {
+  color: get-text-color(brand);
+  background: none;
+  border: 1px solid get-text-color(brand);
+  border-radius: 2px;
+  padding: $spacer * 2 $spacer * 7;
+  line-height: get-line-height(md);
+  cursor: pointer;
+}
+
+h1 {
+  font-size: get-font-size(xl);
+  margin-top: 0;
+  margin-bottom: $spacer * 4;
+
+}

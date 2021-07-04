@@ -1,0 +1,11 @@
+
+@mixin box-shadow () {
+  @each $key, $value in $box-shadows {
+    $class: if( $key == DEFAULT , 'shadow' , 'shadow-#{$key}');
+    .#{$class} {
+      box-shadow: $value;
+    }
+  }
+}
+
+@include box-shadow();

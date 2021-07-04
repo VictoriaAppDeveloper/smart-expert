@@ -1,0 +1,9 @@
+@mixin display () {
+  @each $key, $value in $displays {
+    .#{$key} {
+      display: $value;
+    }
+  }
+}
+
+@include display();

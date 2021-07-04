@@ -1,0 +1,5 @@
+
+
+@function get-shadow($size: DEFAULT) {
+  @return map-get($box-shadows, $size);
+}

@@ -1,0 +1,20 @@
+
+@function get-font-size($size: DEFAULT) {
+    @return map-get($font-sizes, $size);
+}
+
+@function get-font-weight($weight: DEFAULT) {
+    @return map-get($font-weights, $weight);
+}
+
+@function get-text-color($color: DEFAULT) {
+    @return map-get($text-colors, $color);
+}
+
+@function get-line-height($height: DEFAULT) {
+    @return map-get($line-heights, $height);
+}
+
+@function get-text-decoration($decoration: DEFAULT) {
+    @return map-get($text-decorations, $decoration);
+}

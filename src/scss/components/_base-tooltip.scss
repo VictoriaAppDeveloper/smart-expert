@@ -1,0 +1,120 @@
+@import "../variables";
+@import "../functions";
+
+$triangle-size: $spacer * 2;
+$triangle-size-inner: 6px;
+$tooltip-offset: $spacer * 3;
+
+.base-tooltip {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  &__content {
+    background: $white;
+    padding: $spacer $spacer * 2;
+    position: absolute;
+    box-shadow: get-shadow(xl);
+    width: 137px;
+    z-index: 1;
+    border: 1px solid $light-grey;
+
+    &:after, &:before  {
+      content: " ";
+      position: absolute;
+      border-style: solid;
+    }
+
+    &:before {
+      z-index: 2;
+    }
+
+  }
+
+  &--bottom {
+    .base-tooltip__content {
+      margin-top: $tooltip-offset;
+      top: 100%;
+
+      &:after {
+        bottom: 100%;
+        left: 50%;
+        margin-left: -$triangle-size;
+        border-width: $triangle-size;
+        border-color: transparent transparent $light-grey transparent;
+      }
+      &:before {
+        bottom: 100%;
+        left: 50%;
+        margin-left: -$triangle-size-inner;
+        border-width: $triangle-size-inner;
+        border-color: transparent transparent $white transparent;
+      }
+    }
+  }
+  &--top {
+    .base-tooltip__content {
+      bottom: 100%;
+      margin-bottom: $tooltip-offset;
+
+      &:after {
+        top: 100%;
+        left: 50%;
+        margin-left: -$triangle-size;
+        border-width: $triangle-size;
+        border-color: $light-grey transparent transparent transparent;
+      }
+      &:before {
+        top: 100%;
+        left: 50%;
+        margin-left: -$triangle-size-inner;
+        border-width: $triangle-size-inner;
+        border-color: $white transparent transparent transparent;
+      }
+    }
+  }
+  &--left {
+    .base-tooltip__content {
+      right: 100%;
+      margin-right: $tooltip-offset;
+
+      &:after {
+        top: 20%;
+        left: calc(100% + #{$triangle-size});
+        margin-left: -$triangle-size;
+        border-width: $triangle-size;
+        border-color: transparent transparent transparent $light-grey;
+      }
+      &:before {
+        top: 20%;
+        left: calc(100% + #{$triangle-size-inner});
+        margin-left: -$triangle-size-inner;
+        border-width: $triangle-size-inner;
+        border-color: transparent transparent transparent $white;
+
+      }
+
+    }
+  }
+  &--right {
+    .base-tooltip__content {
+      margin-left: $tooltip-offset;
+      left: 100%;
+
+      &:after {
+        top: 20%;
+        right: 100%;
+        margin-left: -$triangle-size;
+        border-width: $triangle-size;
+        border-color: transparent $light-grey transparent transparent;
+      }
+      &:before {
+        top: 20%;
+        right: 100%;
+        margin-left: -$triangle-size-inner;
+        border-width: $triangle-size-inner;
+        border-color: transparent $white transparent transparent;
+      }
+
+    }
+  }
+}

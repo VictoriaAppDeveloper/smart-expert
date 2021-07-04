@@ -1,0 +1,12 @@
+
+@mixin container () {
+  .container {
+    max-width: $container-size;
+    width: 100%;
+    padding-left: $spacer * 4;
+    padding-right: $spacer * 4;
+    margin: 0 auto;
+  }
+}
+
+@include container()
