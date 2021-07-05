@@ -1,6 +1,6 @@
 <template>
-  <div class="flex">
-    <div class="mr-12px">
+  <div class="flex flex-wrap">
+    <div class="m-12px">
       <BaseTooltip>
         <button>Bottom</button>
         <template #content>
@@ -8,7 +8,7 @@
         </template>
       </BaseTooltip>
     </div>
-    <div class="mr-12px">
+    <div class="m-12px">
       <BaseTooltip direction="top">
         <button>Top</button>
         <template #content>
@@ -16,7 +16,7 @@
         </template>
       </BaseTooltip>
     </div>
-    <div class="mr-12px">
+    <div class="m-12px">
       <BaseTooltip direction="left">
         <button>Left</button>
         <template #content>
@@ -24,7 +24,7 @@
         </template>
       </BaseTooltip>
     </div>
-    <div>
+    <div class="m-12px">
       <BaseTooltip direction="right">
         <button>Right</button>
         <template #content>

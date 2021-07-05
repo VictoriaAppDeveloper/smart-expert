@@ -38,6 +38,10 @@ button {
   cursor: pointer;
 }
 
+.flex-wrap {
+ flex-wrap: wrap;
+}
+
 h1 {
   font-size: get-font-size(xl);
   margin-top: 0;

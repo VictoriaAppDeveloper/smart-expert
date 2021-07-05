@@ -1,7 +1,7 @@
 <template>
   <div class="ml-16px">
     <label for="select" class="mb-8px">Text</label>
-    <BaseSelect v-model="selectValue" :items="selectItems" id="select"/>
+    <BaseSelect v-model="selectedId" :items="selectItems" id="select"/>
   </div>
 </template>
 
@@ -12,10 +12,17 @@ name: "BaseSelectPage",
   components: {BaseSelect},
   data: () => {
     return {
-      selectValue: 'text',
-      selectItems: ['text', 'text1', 'text2']
+      selectedId: 1,
+      selectItems: []
     }
-  }
+  },
+  async mounted() {
+    const response = await this.axios.get('https://60de1565878c890017fa2d5f.mockapi.io/api/v1/users')
+    if (response.data) {
+      this.selectItems = response.data
+    }
+  },
+
 }
 </script>
 

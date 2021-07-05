@@ -1,0 +1,8 @@
+@import "../variables";
+
+.base-tabs {
+  overflow-y: hidden;
+  overflow-x: auto;
+  display: flex;
+  padding-bottom: $spacer * 4;
+}

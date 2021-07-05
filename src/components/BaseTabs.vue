@@ -24,3 +24,6 @@ export default {
   }
 }
 </script>
+<style lang="scss">
+@import "@/scss/components/base-tabs";
+</style>

@@ -1,6 +1,8 @@
 @import "../variables";
 @import "../functions";
 
+$field-height: 32px;
+
 .base-select {
   min-width: 265px;
   position: relative;
@@ -10,7 +12,7 @@
     border: 1px solid $secondary;
     border-radius: 2px;
     padding: $spacer * 2 $spacer * 3;
-    height: 32px;
+    height: $field-height;
     display: flex;
     align-items: center;
     width: 100%;
@@ -34,6 +36,13 @@
     position: absolute;
     width: 100%;
     background: $white;
+    max-height: 200px;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    &--offset {
+      bottom: $field-height;
+    }
   }
 
   &__option {
