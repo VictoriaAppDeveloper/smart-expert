@@ -2,6 +2,14 @@
 @import "variables";
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
 
+:root {
+  --primary: #{$primary};
+  --secondary: #{$secondary};
+  --light-grey: #{$light-grey};
+  --black: #{$black};
+  --white: #{$white};
+}
+
 body {
   font-size: get-font-size();
   font-weight: get-font-weight();
